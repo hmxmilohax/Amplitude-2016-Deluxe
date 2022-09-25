@@ -1,0 +1,17 @@
+md "%~dp0_ark\ps3\world"
+md "%~dp0_ark\ps3\world\world_01"
+md "%~dp0_ark\ps3\world\world_02"
+md "%~dp0_ark\ps3\world\world_03"
+md "%~dp0_ark\ps3\world\shared"
+md "%~dp0_ark\ps3\world\shared\fx"
+md "%~dp0_ark\ps3\world\shared\geo"
+md "%~dp0_ark\ps3\world\shared\shaders"
+FOR /F "tokens=*" %%f IN ('dir "%~dp0dx_optional_additions\blackbg\world_01" /b *.png') DO copy "%~dp0dx_optional_additions\blackbg\world_01\%%f" "%~dp0_ark\ps3\world\world_01\%%~nxf"
+FOR /F "tokens=*" %%f IN ('dir "%~dp0dx_optional_additions\blackbg\world_02" /b *.png') DO copy "%~dp0dx_optional_additions\blackbg\world_02\%%f" "%~dp0_ark\ps3\world\world_02\%%~nxf"
+FOR /F "tokens=*" %%f IN ('dir "%~dp0dx_optional_additions\blackbg\world_03" /b *.png') DO copy "%~dp0dx_optional_additions\blackbg\world_03\%%f" "%~dp0_ark\ps3\world\world_03\%%~nxf"
+FOR /F "tokens=*" %%f IN ('dir "%~dp0dx_optional_additions\blackbg\shared" /b *.png') DO copy "%~dp0dx_optional_additions\blackbg\shared\%%f" "%~dp0_ark\ps3\world\shared\%%~nxf"
+FOR /F "tokens=*" %%f IN ('dir "%~dp0dx_optional_additions\blackbg\shared\fx" /b *.png') DO copy "%~dp0dx_optional_additions\blackbg\shared\fx\%%f" "%~dp0_ark\ps3\world\shared\fx\%%~nxf"
+FOR /F "tokens=*" %%f IN ('dir "%~dp0dx_optional_additions\blackbg\shared\geo" /b *.png') DO copy "%~dp0dx_optional_additions\blackbg\shared\geo\%%f" "%~dp0_ark\ps3\world\shared\geo\%%~nxf"
+FOR /F "tokens=*" %%f IN ('dir "%~dp0dx_optional_additions\blackbg\shared\shaders" /b *.png') DO copy "%~dp0dx_optional_additions\blackbg\shared\shaders\%%f" "%~dp0_ark\ps3\world\shared\shaders\%%~nxf"
+
+pause

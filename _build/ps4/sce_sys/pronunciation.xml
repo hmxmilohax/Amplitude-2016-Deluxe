@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gamePackage>
+  <language id="00" modified="0">
+    <speechRecognitionWords>
+      <text display="1">Amplitude</text>
+      <pronunciation>a m p r e t u d</pronunciation>
+    </speechRecognitionWords>
+  </language>
+  <language id="01" modified="0">
+    <speechRecognitionWords>
+      <text display="1">Amplitude</text>
+      <pronunciation>ae m p l ax t uw d</pronunciation>
+    </speechRecognitionWords>
+    <speechRecognitionWords>
+      <text display="1">Amplitude</text>
+      <pronunciation>ae m p l ih t y uw d</pronunciation>
+    </speechRecognitionWords>
+  </language>
+  <language id="02" modified="0">
+    <speechRecognitionWords>
+      <text display="1">Amplitude</text>
+      <pronunciation>aN p l i t y d</pronunciation>
+    </speechRecognitionWords>
+    <speechRecognitionWords>
+      <text display="1">Amplitude</text>
+      <pronunciation>a m p l AX t u d</pronunciation>
+    </speechRecognitionWords>
+  </language>
+  <language id="03" modified="0">
+    <speechRecognitionWords>
+      <text display="1">Amplitude</text>
+      <pronunciation>a m p l i t u D e</pronunciation>
+    </speechRecognitionWords>
+    <speechRecognitionWords>
+      <text display="1">Amplitude</text>
+      <pronunciation>a m p l i t u d e</pronunciation>
+    </speechRecognitionWords>
+  </language>
+  <language id="04" modified="0">
+    <speechRecognitionWords>
+      <text display="1">Amplitude</text>
+      <pronunciation>a m p l i o t</pronunciation>
+    </speechRecognitionWords>
+    <speechRecognitionWords>
+      <text display="1">Amplitude</text>
+      <pronunciation>a m p l i u d ae</pronunciation>
+    </speechRecognitionWords>
+  </language>
+  <language id="05" modified="0">
+    <speechRecognitionWords>
+      <text display="1">Amplitude</text>
+      <pronunciation>a m p l i t u d e</pronunciation>
+    </speechRecognitionWords>
+    <speechRecognitionWords>
+      <text display="1">Amplitude</text>
+      <pronunciation>m p l a t u d</pronunciation>
+    </speechRecognitionWords>
+  </language>
+  <language id="18" modified="0">
+    <speechRecognitionWords>
+      <text display="1">Amplitude</text>
+      <pronunciation>ae m p l ih t y uw d</pronunciation>
+    </speechRecognitionWords>
+    <speechRecognitionWords>
+      <text display="1">Amplitude</text>
+      <pronunciation>ae m p l ax t uw d</pronunciation>
+    </speechRecognitionWords>
+  </language>
+</gamePackage>
