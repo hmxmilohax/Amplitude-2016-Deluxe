@@ -6,5 +6,5 @@ for /R "%~dp0_ark\ps4" %%f in (*.dta) do dependencies\dtxtool\dtxtool dta2b "%%f
 for /R "%~dp0_ark\ps4" %%f in (*.script_dta) do dependencies\dtxtool\dtxtool dta2b "%%f" "%%~dpnf.script_dta_ps4" 3
 xcopy /e /y _ark\ps4 _build\modulate\ps4\ps4
 cd _build\modulate
-rem modulate -autoadd ps4 -pack_add ps4 ../ps4
+modulate -autoadd ps4 -pack_add ps4 ../ps4
 pause
