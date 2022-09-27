@@ -10,12 +10,12 @@
       (supported 
          (eng fre ita deu esl ptb)) 
 #ifndef _SHIP
-    
       (cheat_supported 
          (eng fre ita deu esl ptb)) 
 #endif 
    ) 
-   (ps4_map_file "amplitude_ps4_%s.map"))
+   (ps4_map_file "amplitude_ps4_%s.map") 
+   (np_communication_id "NPWR08945_00"))
 (sound_manager 
    (fmod_live_update FALSE) 
    (master_pause_bus_path "bus:/MASTER_SFX"))
@@ -29,7 +29,7 @@
          (0 1 2 3)) 
       (scee 
          (0 1 2 3 4))))
-(locale ../ui/locale/eng/locale_keep.dta)
+(locale ../ui/locale/eng/locale_keep.dta ../ui/locale/eng/locale_updates_keep.dta)
 (ui)
 (crucible 
    (project "amplitude"))
@@ -192,6 +192,11 @@
                {if 
                   {exists toggle_vsync }
                   {toggle_vsync }})) 
+         (V 
+            ( 
+               {if 
+                  {exists next_vsync_mode }
+                  {next_vsync_mode }})) 
          (KB_UP 
             ( 
                {if 
@@ -447,8 +452,15 @@
    (german_fx_midi_file "SoundFX/german/FX.mid") 
    (italian_fx_midi_file "SoundFX/italian/FX.mid"))
 (gfx 
-   (difficulty_scale_tweaks 1.0 1.0 0.93 0.8 0.8))
-(init)
+   (difficulty_scale_tweaks 1.0 1.0 0.93 0.8 0.8)
+#ifdef HX_PS3
+   (allow_tessellation FALSE) 
+   (allow_skinning TRUE)
+#endif
+)
+(init
+   #include init.dta 
+   )
 (game 
    (zero_rand_seed FALSE) 
    (stats) 
