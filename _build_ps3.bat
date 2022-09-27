@@ -1,3 +1,4 @@
+git pull https://github.com/hmxmilohax/amplitude-2016-deluxe main
 for /R "%~dp0_ark\ps3" %%f in (*) do (if "%%~xf"==".dta_dta_ps3" del "%%~f")
 for /R "%~dp0_ark\ps3" %%f in (*) do (if "%%~xf"==".script_dta_ps3" del "%%~f")
 for /R "%~dp0_ark\ps3" %%f in (*.dta) do dependencies\dtxtool\dtxtool dta2b "%%f" "%%~dpnf.dta_dta_ps3" 3
