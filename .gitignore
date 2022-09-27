@@ -1,5 +1,8 @@
-
 *.dta_dta_ps3
 *.dta_dta_ps4
 *.script_dta_ps3
 *.script_dta_ps4
+*.hdr
+*.ark
+_build/modulate/ps3
+_build/modulate/ps4

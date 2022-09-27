@@ -1,0 +1,7 @@
+for /R "%~dp0_ark\ps3" %%f in (*) do (if "%%~xf"==".dta_dta_ps3" del "%%~f")
+for /R "%~dp0_ark\ps3" %%f in (*) do (if "%%~xf"==".script_dta_ps3" del "%%~f")
+for /R "%~dp0_ark\ps3" %%f in (*.dta) do dependencies\dtxtool\dtxtool dta2b "%%f" "%%~dpnf.dta_dta_ps3" 3
+for /R "%~dp0_ark\ps3" %%f in (*.script_dta) do dependencies\dtxtool\dtxtool dta2b "%%f" "%%~dpnf.script_dta_ps3" 3
+cd _build\modulate
+modulate -ps3 -autoadd ps3 -pack_add ps3 ../ps3
+pause
