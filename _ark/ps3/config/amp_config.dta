@@ -453,11 +453,8 @@
    (italian_fx_midi_file "SoundFX/italian/FX.mid"))
 (gfx 
    (difficulty_scale_tweaks 1.0 1.0 0.93 0.8 0.8)
-#ifdef HX_PS3
    (allow_tessellation FALSE) 
-   (allow_skinning TRUE)
-#endif
-)
+   (allow_skinning TRUE))
 (init
    #include init.dta 
    )
