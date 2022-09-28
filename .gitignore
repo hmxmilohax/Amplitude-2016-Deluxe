@@ -10,3 +10,6 @@ _ark/ps3/config/init.dta
 _ark/ps3/ui/locale/eng/locale_updates_keep.dta
 _ark/ps4/config/init.dta
 _ark/ps4/ui/locale/eng/locale_updates_keep.dta
+_ark/ps4/songs
+_ark/ps3/songs
+_ark/combined/songs ! !PLACE CUSTOM SONGS HERE.txt
