@@ -44,6 +44,10 @@ After the gp4 is generated, open `orbis-pub-gen.exe` in `dependencies/ps4-pkg-to
 
 Run the build script again to pull any new updates committed to the repo and rebuild a new ark.
 
+## Custom Songs
+
+(TODO: Where can customs be found?) Amplitude 2016 Deluxe can convert custom songs to the correct console when being built. Place custom song folders into `_ark/combined/songs` and run your consoles build bat. Songs will be automatically added via Modulate.
+
 ## Included Dependencies
 
 [Git for Windows](https://gitforwindows.org/) - CLI application to allow auto updating ampdx repo files
