@@ -1,9 +1,5 @@
 git pull https://github.com/hmxmilohax/amplitude-2016-deluxe main
 xcopy /e /y _ark\combined _ark\ps3
-for /R "%~dp0_ark\ps3\songs" %%f in (*.dta_dta_ps4) do move "%%f" "%%~dpnf.dta_dta_ps3"
-for /R "%~dp0_ark\ps3\songs" %%f in (*.moggsong_dta_ps4) do move "%%f" "%%~dpnf.moggsong_dta_ps3"
-for /R "%~dp0_ark\ps3\songs" %%f in (*.png_ps4) do move "%%f" "%%~dpnf.png_ps3"
-for /R "%~dp0_ark\ps3\songs" %%f in (*.mid_ps4) do move "%%f" "%%~dpnf.mid_ps3"
 del "%~dp0_ark\ps3\songs\!PLACE CUSTOM SONGS HERE.txt"
 for /R "%~dp0_ark\ps3" %%f in (*) do (if "%%~xf"==".dta_dta_ps3" del "%%~f")
 for /R "%~dp0_ark\ps3" %%f in (*) do (if "%%~xf"==".script_dta_ps3" del "%%~f")
