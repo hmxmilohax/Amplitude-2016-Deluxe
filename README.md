@@ -62,9 +62,9 @@ To take advantage of these customs, first ensure [python](https://www.python.org
 
 Head to the `dependencies` folder in this repo and run the install_gitpython.bat, or run `pip install gitpython` in cmd.
 
-after that, running `_download_custom_songs.bat` will automatically pull the repo and add the songs to the correct folder
+after that, running `_download_custom_songs_ps3.bat` for ps3 or `_download_custom_songs_ps4.bat` for ps4 will automatically pull the repo and add the songs to the correct folder
 
-The next time you build Amplitude 2016 Deluxe, the custom songs will show up and be playable.
+The next time you build Amplitude 2016 Deluxe with eiter `_build_ps#.bat` or `_build_ps#_nosong.bat`, the custom songs will show up and be playable.
 
 ## Manually-Add
 
