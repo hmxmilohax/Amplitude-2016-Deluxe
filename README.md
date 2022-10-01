@@ -38,7 +38,7 @@ You can setup git with all default options.
 
 Once the dependency is installed, run `_init_repo.bat` in an **empty folder**. git will pull the repo and make sure you are completely up to date.
 
-After Running `_init_repo.bat`, extract your Amplitude 2016 .ark and .hdr files to the `_build/modulate` folder and `_build/ps3/USRDIR` for PS3 or `_build/ps4` for PS4. You might want to make a backup as Amplitude 2016 Deluxe will overwrite them.
+After Running `_init_repo.bat`, extract your Amplitude 2016 .ark and .hdr files to the `_build/modulate` folder. You might want to make a backup as Amplitude 2016 Deluxe/Custom Songs will overwrite them.
 
 For the first build of Amplituded 2016 deluxe and any builds with new [manually added custom songs](##Manually-Add), run `_build_ps3.bat` or `_build_ps4.bat` depending on the console you are building for. This script will unpack the ark, pull the repo again for updates, build the ARK for you, and spit it out in `_build/ps3` or `_build/ps4`
 
