@@ -29,7 +29,7 @@
          (0 1 2 3)) 
       (scee 
          (0 1 2 3 4))))
-(locale ../ui/locale/eng/locale_keep.dta)
+(locale ../ui/locale/eng/locale_keep.dta ../ui/locale/eng/locale_updates_keep.dta)
 (ui)
 (crucible 
    (project "amplitude"))
