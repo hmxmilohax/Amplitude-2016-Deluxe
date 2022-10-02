@@ -40,9 +40,9 @@ Once the dependency is installed, run `_init_repo.bat` in an **empty folder**. g
 
 After Running `_init_repo.bat`, extract your Amplitude 2016 .ark and .hdr files to the `_build/modulate` folder. You might want to make a backup as Amplitude 2016 Deluxe/Custom Songs will overwrite them.
 
-For the first build of Amplituded 2016 deluxe and any builds with new [manually added custom songs](##Manually-Add), run `_build_ps3.bat` or `_build_ps4.bat` depending on the console you are building for. This script will unpack the ark, pull the repo again for updates, build the ARK for you, and spit it out in `_build/ps3` or `_build/ps4`
+For the first build of Amplituded 2016 deluxe and any builds with new [manually added custom songs](#Manually-Add), run `_build_ps3.bat` or `_build_ps4.bat` depending on the console you are building for. This script will unpack the ark, pull the repo again for updates, build the ARK for you, and spit it out in `_build/ps3` or `_build/ps4`
 
-Otherwise simply run `_build_ps3_nosong.bat` or `_build_ps4_nosong.bat` depending on the console you are building for. This script will **NOT** extract the ark, so if you [manually added new customs](##Manually-Add), this **WON'T** work. This script pulls the repo again for updates, builds the ARK for you, and spits it out in `_build/ps3` or `_build/ps4`.
+Otherwise simply run `_build_ps3_nosong.bat` or `_build_ps4_nosong.bat` depending on the console you are building for. This script will **NOT** extract the ark, so if you [manually added new customs](#Manually-Add), this **WON'T** work. This script pulls the repo again for updates, builds the ARK for you, and spits it out in `_build/ps3` or `_build/ps4`.
 
 For PS3/RPCS3, After the build bat is done, copy everything in `_build/ps3` to `dev_hdd0/game/NPUB31810` for US and `dev_hdd0/game/NPEB02398` for EU.
 
