@@ -13,7 +13,7 @@ except ModuleNotFoundError:
 cwd = Path().absolute()
 
 # clone/pull amp songs
-amp_songs_source_path = cwd.joinpath("amp-2016-customs-ps3")
+amp_songs_source_path = cwd.joinpath("amp-2016-customs")
 
 try:
     repo = git.Repo.clone_from("https://github.com/jnackmclain/amp-2016-customs.git", amp_songs_source_path, branch="main")
@@ -22,7 +22,7 @@ except:
     origin = repo.remotes.origin
     origin.pull()
 
-amp_2016_songs_source_folder = cwd.joinpath("amp-2016-customs-ps3/songs")
+amp_2016_songs_source_folder = cwd.joinpath("amp-2016-customs/songs")
 amp_2016_customs_folder = cwd.joinpath("_ark/ps3/songs")
 files = os.listdir(amp_songs_source_path)
 shutil.copytree(amp_2016_songs_source_folder, amp_2016_customs_folder)
