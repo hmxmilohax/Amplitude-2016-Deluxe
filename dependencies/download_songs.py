@@ -23,7 +23,7 @@ except:
     origin.pull()
 
 amp_2016_songs_source_folder = cwd.joinpath("amp-2016-customs/songs")
-amp_2016_customs_folder = cwd.joinpath("_ark/ps3/songs")
+amp_2016_customs_folder = cwd.joinpath("_ark/combined/songs")
 files = os.listdir(amp_songs_source_path)
 shutil.copytree(amp_2016_songs_source_folder, amp_2016_customs_folder)
 
