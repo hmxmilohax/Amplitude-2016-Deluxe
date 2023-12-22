@@ -4,7 +4,7 @@ import shutil
 import os
 try:
     import git
-    print("module 'git' is installed. Downloading/enabling additional Amp 2016 custom songs for PS3, this may take some time.")
+    print("module 'git' is installed. Downloading/enabling additional Amp 2016 custom songs, this may take some time.")
 except ModuleNotFoundError:
     print("module 'git' is not installed. Install it via '/dependencies/install_gitpython.bat' or 'pip install gitpython'")
     sys.exit(1)

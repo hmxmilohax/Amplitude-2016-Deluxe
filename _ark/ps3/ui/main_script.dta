@@ -1,6 +1,0 @@
-(define MainScript 
-   (rev 0) 
-   (description "Main Menu Script"))
-(enter 
-   {$theDB set_song uber } 
-   {$theDB set_community kCommSoloQP })
