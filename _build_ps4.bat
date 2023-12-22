@@ -15,7 +15,7 @@ rmdir /s /q "%~dp0_tmpbuild"
 echo:Adding songs to Amplitude 2016 Deluxe config...
 "%~dp0dependencies\amphelper" song add-all "%~dp0_prep_ps4\ext_ark". >nul
 echo:Building Amplitude 2016 Deluxe arks...
-"%~dp0dependencies\amphelper" ark pack "%~dp0_prep_ps4\ext_ark" "%~dp0_build\ps4\main_ps4.hdr" >nul
+"%~dp0dependencies\amphelper" ark pack "%~dp0_prep_ps4\ext_ark" "%~dp0_build\ps4\AFR\CUSA02480\main_ps4.hdr" >nul
 echo:Wrote Amplitude 2016 Deluxe arks.
 echo:Complete! Enjoy Amplitude 2016 Deluxe
 pause

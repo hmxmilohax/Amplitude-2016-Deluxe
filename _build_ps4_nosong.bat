@@ -14,7 +14,7 @@ xcopy /q /e /y _tmpbuild _prep_ps4\ext_ark\ps4
 for /R "%~dp0_tmpbuild" %%f in (*) do del "%%f"
 rmdir /s /q "%~dp0_tmpbuild"
 echo:Building Amplitude 2016 Deluxe arks without new songs...
-"%~dp0dependencies\amphelper" ark pack "%~dp0_prep_ps4\ext_ark" "%~dp0_build\ps4\main_ps4.hdr" >nul
+"%~dp0dependencies\amphelper" ark pack "%~dp0_prep_ps4\ext_ark" "%~dp0_build\ps4\AFR\CUSA02480\main_ps4.hdr" >nul
 echo:Wrote Amplitude 2016 Deluxe arks.
 echo:Complete! Enjoy Amplitude 2016 Deluxe
 pause
