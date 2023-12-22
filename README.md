@@ -46,7 +46,16 @@ You can also run `_build_ps3_nosong.bat` or `_build_ps4_nosong.bat` depending on
 
 For PS3/RPCS3, After the build bat is done, copy everything in `_build/ps3` to `dev_hdd0/game/NPUB31810` for US and `dev_hdd0/game/NPEB02398` for EU.
 
-For PS4, After the build bat is done, install the `amp16dx_afr_blank.pkg` file to your PS4, and copy the rest of the files in `_build/ps4` to the `data/GoldHEN` folder on your ps4
+For PS4, After the build bat is done, install the `amp16dx_afr_blank.pkg` file found in `_build/ps4` to your PS4, and copy the rest of the files in `_build/ps4` to the `data/GoldHEN` folder on your ps4.
+
+If you already have a modified `plugins.ini` in your GoldHEN folder, simply add the following lines to your `plugins.ini`:
+
+```ini
+; Amplitude 2016 Deluxe plugins
+[CUSA02480]
+/data/GoldHEN/plugins/afr.prx
+/data/GoldHEN/plugins/no_share_watermark.prx
+```
 
 Run the build script again to pull any new updates committed to the repo and rebuild a new ark.
 
