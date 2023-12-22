@@ -4,10 +4,12 @@
 *.script_dta_ps4
 *.hdr
 *.ark
-_build/prep/*.hdr
-_build/prep/*.ark
-_build/prep/ps4
-_build/prep/ps3
+_prep_ps4/*.hdr
+_prep_ps4/*.ark
+_prep_ps4/ext_ark
+_prep_ps3/*.hdr
+_prep_ps3/*.ark
+_prep_ps3/ext_ark
 _ark/ps3/config/init.dta
 _ark/ps3/ui/locale/eng/locale_updates_keep.dta
 _ark/ps4/config/init.dta
