@@ -38,17 +38,15 @@ You can setup git with all default options.
 
 Once the dependency is installed, run `_init_repo.bat` in an **empty folder**. git will pull the repo and make sure you are completely up to date.
 
-After Running `_init_repo.bat`, extract your Amplitude 2016 .ark and .hdr files to the `_build/modulate` folder. You might want to make a backup as Amplitude 2016 Deluxe/Custom Songs will overwrite them.
+After Running `_init_repo.bat`, extract your Amplitude 2016 .ark and .hdr files to the `_prep_ps3` or `_prep_ps4` folder, depending on your console.
 
-For the first build of Amplituded 2016 deluxe and any builds with new [manually added custom songs](#Manually-Add), run `_build_ps3.bat` or `_build_ps4.bat` depending on the console you are building for. This script will unpack the ark, pull the repo again for updates, build the ARK for you, and spit it out in `_build/ps3` or `_build/ps4`
+To build Amplitude 2016 deluxe with new [custom songs](#Songs), run `_build_ps3.bat` or `_build_ps4.bat` depending on the console you are building for. This script will pull the repo for updates, build the ARK for you, and spit it out in `_build/ps3` or `_build/ps4`.
 
-Otherwise simply run `_build_ps3_nosong.bat` or `_build_ps4_nosong.bat` depending on the console you are building for. This script will **NOT** extract the ark, so if you [manually added new customs](#Manually-Add), this **WON'T** work. This script pulls the repo again for updates, builds the ARK for you, and spits it out in `_build/ps3` or `_build/ps4`.
+You can also run `_build_ps3_nosong.bat` or `_build_ps4_nosong.bat` depending on the console you are building for. This script will **NOT** update the song list, so if you [added new customs](#Songs), they **WON'T** be included. This script will pull the repo for updates, build the ARK for you, and spit it out in `_build/ps3` or `_build/ps4`.
 
 For PS3/RPCS3, After the build bat is done, copy everything in `_build/ps3` to `dev_hdd0/game/NPUB31810` for US and `dev_hdd0/game/NPEB02398` for EU.
 
-For PS4, After the build bat is done, open `gengp4-app.exe` in `dependencies/ps4-pkg-tools`, select CUSAXXXXX folder in `_build/ps4`, and generate a gp4 file. Save it somewhere memorable.
-
-After the gp4 is generated, open `orbis-pub-gen.exe` in `dependencies/ps4-pkg-tools`, open the gp4 file generated in the previous step and click build, select an output folder and build with the default settings. If you want a slight speedup, build with skip digest calculation checked. Install to your PS4 and enjoy!
+For PS4, After the build bat is done, install the `amp16dx_afr_blank.pkg` file to your PS4, and copy the rest of the files in `_build/ps4` to the `data/GoldHEN` folder on your ps4
 
 Run the build script again to pull any new updates committed to the repo and rebuild a new ark.
 
@@ -62,15 +60,15 @@ To take advantage of these customs, first ensure [python](https://www.python.org
 
 Head to the `dependencies` folder in this repo and run the install_gitpython.bat, or run `pip install gitpython` in cmd.
 
-after that, running `_download_custom_songs_ps3.bat` for ps3 or `_download_custom_songs_ps4.bat` for ps4 will automatically pull the repo and add the songs to the correct folder
+after that, running `_download_custom_songs.bat` will automatically pull the repo and add the songs to the correct folder
 
-The next time you build Amplitude 2016 Deluxe with eiter `_build_ps#.bat` or `_build_ps#_nosong.bat`, the custom songs will show up and be playable.
+The next time you build Amplitude 2016 Deluxe with `_build_ps#.bat`, the custom songs will show up and be playable.
 
 ## Manually-Add
 
-With the help of [Modulation](https://github.com/DanTheMan827/Modulation) Amplitude 2016 Deluxe can convert custom songs to the correct console when being built.
+With the help of [AmpHelper](https://github.com/hmxmilohax/AmpHelper) Amplitude 2016 Deluxe can convert custom songs to the correct console when being built.
 
-Open Modulation in the dependencies folder and select the hdr of your console in `_build/modulate`, then drag in zipped songs from wherever you can find custom songs (we reccomend using the [custom songs repo](https://github.com/hmxmilohax/amp-2016-customs) or prepackaged zips from the [website](https://hmxmilohax.github.io/amp-2016-customs/)).
+Simply copy the extracted folder of a custom to `_ark/combined/songs`, making sure to delete any files ending in `_ps3` or `_ps4`.
 
 After that, running  `_build_ps3.bat` or `_build_ps4.bat` will show the new songs that were added when rebuilt.
 
@@ -80,12 +78,8 @@ After that, running  `_build_ps3.bat` or `_build_ps4.bat` will show the new song
 
 [LibForge](https://github.com/mtolly/LibForge) - ForgeTool for modifying Amplitude 2016 Textures
 
-[Modulate](https://github.com/AdamClixby/Modulate) - To patch Amplitude 2016 Arks with the Deluxe updates
-
-[Modulation](https://github.com/DanTheMan827/Modulation) - To add custom songs to Amplitude 2016
+[AmpHelper](https://github.com/hmxmilohax/AmpHelper) - To patch Amplitude 2016 Arks with the Deluxe updates
 
 [DtxCS](https://github.com/InvoxiPlayGames/DtxCS) - For serializing Amplitude 2016 dtb files
 
 [python](https://www.python.org/downloads/) - for more detailed script functions such as adding custom songs
-
-[PS4 Fake PKG Tools 3.87](https://github.com/CyB1K/PS4-Fake-PKG-Tools-3.87) - for creating a Amplitude 2016 PKG for PS4
