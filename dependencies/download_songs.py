@@ -4,7 +4,7 @@ import shutil
 import os
 try:
     import git
-    print("module 'git' is installed. Downloading/enabling additional Amp 2016 custom songs for PS3, this may take some time.")
+    print("module 'git' is installed. Downloading/enabling additional Amp 2016 custom songs, this may take some time.")
 except ModuleNotFoundError:
     print("module 'git' is not installed. Install it via '/dependencies/install_gitpython.bat' or 'pip install gitpython'")
     sys.exit(1)
@@ -23,7 +23,7 @@ except:
     origin.pull()
 
 amp_2016_songs_source_folder = cwd.joinpath("amp-2016-customs/songs")
-amp_2016_customs_folder = cwd.joinpath("_ark/ps3/songs")
+amp_2016_customs_folder = cwd.joinpath("_ark/combined/songs")
 files = os.listdir(amp_songs_source_path)
 shutil.copytree(amp_2016_songs_source_folder, amp_2016_customs_folder)
 
