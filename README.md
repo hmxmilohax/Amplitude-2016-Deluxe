@@ -20,7 +20,7 @@ You will need
 
 - a PC that can run RPCS3
 - a Jailbroken PS3 (CFW/HEN)
-- a Hackable PS4 (sytem software 9.00 or lower)
+- a Hackable PS4 (sytem software 11.00 or lower)
 - a copy of Amplitude 2016 that you can extract onto your PC/install on RPCS3.
 
 # Install
