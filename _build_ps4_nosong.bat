@@ -1,4 +1,5 @@
 @echo off
+mkdir _build\ps4\AFR\CUSA02480
 mkdir _tmpbuild
 git pull https://github.com/hmxmilohax/amplitude-2016-deluxe main
 IF NOT EXIST "%~dp0_prep_ps4\ext_ark\ps4" CALL dev_scripts\!prep_ps4.bat
