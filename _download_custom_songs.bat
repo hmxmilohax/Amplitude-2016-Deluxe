@@ -1,8 +1,10 @@
+@echo off
+
 REM rmdir /s /q "%~dp0\_ark\combined\songs"
 REM python dependencies/download_songs.py
 REM pause
+REM exit /b 0
 
-@echo off
 setlocal enabledelayedexpansion
 
 cd /d "%~dp0"
