@@ -39,7 +39,7 @@ find "./_tmpbuild" -type f -iname "*.dta" ! -iname "*.dta_dta_ps4" | while read 
 done
 
 echo "Converting .script files..."
-find _tmpbuild -type f -iname "*.script" ! -iname "*.script_dta_ps4" | while read -r file; do
+find "./_tmpbuild" -type f -iname "*.script" ! -iname "*.script_dta_ps4" | while read -r file; do
     out="${file%.script}.script_dta_ps4"
     wine "./dependencies/dtxtool/DTXTool.exe" dta2b "$file" "$out" 3
 done
@@ -49,7 +49,7 @@ find "./_tmpbuild" -type f -iname "*.dta" ! -iname "*.dta_dta_ps4" -exec rm {} \
 find "./_tmpbuild" -type f -iname "*.script" ! -iname "*.script_dta_ps4" -exec rm {} \;
 
 echo "Copying processed files to prep directory..."
-mkdir -p "._prep_ps4/ext_ark/ps4"
+mkdir -p "./_prep_ps4/ext_ark/ps4"
 cp -r "./_tmpbuild/"* "./_prep_ps4/ext_ark/ps4/"
 
 echo "Cleaning up temp files..."
