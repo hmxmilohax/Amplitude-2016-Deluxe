@@ -27,8 +27,8 @@ if [[ ! -d "./_prep_ps4/ext_ark/ps4/" ]]; then
 fi
 
 echo "Copying Amplitude 2016 Deluxe PS4 files..."
-cp -r "./_ark/ps4/"* "./_tmpbuild/"
-cp -r "./_ark/combined/"* "./_tmpbuild/"
+cp -r "./_ark/ps4/." "./_tmpbuild/"
+cp -r "./_ark/combined/." "./_tmpbuild/"
 
 rm -rf "./_tmpbuild/songs/"
 
@@ -50,7 +50,7 @@ find "./_tmpbuild" -type f -iname "*.script" ! -iname "*.script_dta_ps4" -exec r
 
 echo "Copying processed files to prep directory..."
 mkdir -p "./_prep_ps4/ext_ark/ps4"
-cp -r "./_tmpbuild/"* "./_prep_ps4/ext_ark/ps4/"
+cp -r "./_tmpbuild/." "./_prep_ps4/ext_ark/ps4/"
 
 echo "Cleaning up temp files..."
 rm -rf "./_tmpbuild"
