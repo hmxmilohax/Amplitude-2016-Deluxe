@@ -17,8 +17,6 @@ echo "Creating build directories..."
 mkdir -p "./_build/ps4/AFR/CUSA02480"
 mkdir -p "./_tmpbuild"
 
-git pull 'https://github.com/hmxmilohax/amplitude-2016-deluxe' main
-
 if [[ ! -d "./_prep_ps4/ext_ark/ps4/" ]]; then
 	echo "Preparing to build PS4 For the first time..."
 	echo "Make sure your 1.0 vanilla ark files are in _prep_ps4"

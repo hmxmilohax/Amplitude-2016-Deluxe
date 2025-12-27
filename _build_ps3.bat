@@ -1,7 +1,6 @@
 @echo off
 mkdir _build\ps3\USRDIR
 mkdir _tmpbuild
-git pull https://github.com/hmxmilohax/amplitude-2016-deluxe main
 IF NOT EXIST "%~dp0_prep_ps3\ext_ark\ps3" CALL dev_scripts\!prep_ps3.bat
 echo:Copying Amplitude 2016 Deluxe PS3 files...
 xcopy /q /e /y _ark\ps3 _tmpbuild
