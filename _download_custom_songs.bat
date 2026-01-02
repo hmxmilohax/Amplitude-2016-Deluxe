@@ -22,7 +22,7 @@ REM Clone or update the repo
 echo.
 if not exist ".\amp-2016-customs\.git" (
     echo - Downloading additional Amp 2016 custom songs, this may take some time.
-    git clone --branch main https://github.com/jnackmclain/amp-2016-customs.git ".\amp-2016-customs"
+    git clone --branch main --depth 1 https://github.com/hmxmilohax/amp-2016-customs.git ".\amp-2016-customs"
 ) else (
     echo - Updating additional Amp 2016 custom songs.
     cd ".\amp-2016-customs"
