@@ -539,7 +539,7 @@
    (bar_capture_threshold 2) 
    (game_calibration_speed 0.1) 
    (game_calibration_max_ms 125) 
-   (av_calibration_step_ms 16.67) 
+   (av_calibration_step_ms 1) 
    (av_calibration_max_ms 250) 
    (av_calibration_min_ms -250) 
    (points 
