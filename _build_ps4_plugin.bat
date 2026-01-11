@@ -1,4 +1,6 @@
 @echo off
+for /R "%~dp0_build\ps4\GoldHEN\AMP16DX\ps4" %%f in (*) do del "%%f"
+rmdir /s /q "%~dp0_build\ps4\GoldHEN\AMP16DX\ps4"
 mkdir _build\ps4\GoldHEN\AMP16DX
 mkdir _tmpbuild
 IF NOT EXIST "%~dp0_prep_ps4\ext_ark\ps4" CALL dev_scripts\!prep_ps4.bat
