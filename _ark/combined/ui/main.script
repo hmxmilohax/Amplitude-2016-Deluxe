@@ -1,0 +1,15 @@
+(define MainScript 
+   (rev 0) 
+   (description "Main Menu Script"))
+(enter 
+   {$theDB set_song uber } 
+   {$theDB set_community kCommSoloQP }
+)
+(shell_option 
+   ($padNum)
+   ;{set $dx_menu main}
+   {$ui remove_scene "ui/shell/organic.scene"}
+   {$ui add_scene "ui/shell/organic.scene"}
+   {$ui add_scene "dx/ui/deluxe_menu.scene"}
+   {$ui remove_scene "ui/main.scene"}
+)

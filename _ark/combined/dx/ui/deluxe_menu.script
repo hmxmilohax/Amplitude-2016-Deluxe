@@ -1,0 +1,68 @@
+(define OptionsScript 
+   (rev 0) 
+   (description "Options Menu Script"))
+(enter
+   {set $dx_button_pressed 0}
+   {set [(combo_freq_mode DrawNode) showing] FALSE}        ; these can't be used unfortunately, too hardcoded
+   {set [(combo_progress_display DrawNode) showing] FALSE} ;
+   {set [(description_info DrawNode) showing] FALSE}
+   ;{set [(config_description_support DrawNode) showing] FALSE}
+   {set [(config_description_eula DrawNode) showing] FALSE}
+   #ifdef HX_PS3
+   {set [(combo_display_zoom DrawNode) showing] FALSE}
+   {set [(description_trademarks DrawNode) showing] FALSE}
+   {set [(digital_sound_logos DrawNode) showing] FALSE}
+   #endif
+   {set [(screen_title Text) localized_token] dx_settings}
+   ;{set [(screen_help Text) localized_token] {symbol "// This is the Deluxe Settings Menu"}}
+   ;{set [(description_header Text) localized_token] test1}
+   {if_else $nofail
+      {set [(button1 Instance) button_text] 'No Fail: ON'}
+      {set [(button1 Instance) button_text] 'No Fail: OFF'}
+   }
+   {set [(button2 Instance) button_text] button2}
+   {set [(button3 Instance) button_text] button3}
+)
+(ui_select 
+   ($objId $objName $padNum $user) 
+   {local $handled }
+   {set $handled 0 }
+   {switch $objName 
+      ("button1"
+         {set $nofail {! $nofail}}
+         {if_else $nofail
+            {do
+               {(button1 Instance) set_button_text 'No Fail: ON'}
+               {set_elem {find $syscfg game damage_invuln_time_ms} 1 999999}
+               {set_elem {find $syscfg game damage_juice} 1 0.0}
+               {set_elem {find $syscfg game damage_juice} 2 0.0}
+               {set_elem {find $syscfg game damage_juice} 3 0.0}
+               {set_elem {find $syscfg game damage_juice} 4 0.0}
+               {set_elem {find $syscfg game damage_juice} 5 0.0}
+            }
+            {do
+               {(button1 Instance) set_button_text 'No Fail: OFF'}
+               {set_elem {find $syscfg game damage_invuln_time_ms} 1 750}
+               {set_elem {find $syscfg game damage_juice} 1 -1.0}
+               {set_elem {find $syscfg game damage_juice} 2 -1.0}
+               {set_elem {find $syscfg game damage_juice} 3 -1.0}
+               {set_elem {find $syscfg game damage_juice} 4 -1.0}
+               {set_elem {find $syscfg game damage_juice} 5 -1.0}
+            }
+         }
+      )
+      ("button2"
+         {write_file {sprint AMP16DX_PATH "dx.dta"} $syscfg}
+         ;{set [(description_header Text) localized_token] {symbol {sprint }}}
+      )
+      ("button3"
+         {file_delete {sprint AMP16DX_PATH "dx.dta"}}
+      )
+   } 
+   $handled)
+(helpbar_back 
+   ($padNum) 
+   {$ui remove_scene "ui/shell/organic.scene"}
+   {$ui add_scene "ui/shell/organic.scene"}
+   {$ui add_scene "ui/main.scene"}
+   {$ui remove_scene "dx/ui/deluxe_menu.scene"})
