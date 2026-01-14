@@ -656,7 +656,7 @@
    (initial_juice 8.0 8.0 8.0 8.0 8.0) 
    (checkpoint_juice 8.0 2.0 2.0 2.0 2.0) 
    (capture_juice 1.0 1.0 1.0 1.0 0.0) 
-   (damage_juice 0.0 0.0 0.0 0.0 0.0) 
+   (damage_juice -1.0 -1.0 -1.0 -1.0 -1.0) 
    (checkpoint_fail_juice -4.0 -4.0 -4.0 -4.0 -4.0) 
    (juice_meter_max 8.0 8.0 8.0 8.0 8.0) 
    (damage_invuln_time_ms 750) 
