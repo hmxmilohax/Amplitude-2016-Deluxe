@@ -1,3 +1,5 @@
+#include ../dx/config/dx_macros.dta
+
 
 #include include/version.dta
 
@@ -10,12 +12,15 @@
       (supported 
          (eng fre ita deu esl ptb)) 
 #ifndef _SHIP
-    
       (cheat_supported 
          (eng fre ita deu esl ptb)) 
 #endif 
    ) 
-   (ps4_map_file "amplitude_ps4_%s.map"))
+   (ps4_map_file "amplitude_ps4_%s.map") 
+   #ifdef HX_PS3 
+   (np_communication_id "NPWR08945_00")
+   #endif
+)
 (sound_manager 
    (fmod_live_update FALSE) 
    (master_pause_bus_path "bus:/MASTER_SFX"))
@@ -34,7 +39,11 @@
 (crucible 
    (project "amplitude"))
 (timer)
-(rnd)
+(rnd
+   ;(console_resolution #ifdef HX_PS3 1280 720 #else 1920 1080 #endif ) 
+   ;(vsync_mode #ifdef HX_PS3 2 #else 1 #endif ) 
+   ;(vsync_enabled TRUE) 
+)
 (cheats 
    (quick_cheats 
       (left 
@@ -192,6 +201,11 @@
                {if 
                   {exists toggle_vsync }
                   {toggle_vsync }})) 
+         (V 
+            ( 
+               {if 
+                  {exists next_vsync_mode }
+                  {next_vsync_mode }})) 
          (KB_UP 
             ( 
                {if 
@@ -343,6 +357,64 @@
       (WAYFARER song_wayfarer unlock_extra unlock_extra_desc "ui/textures/black_square.png" CAMPVO_song_extra)) 
    (campaign 
       #ifdef CAREER_UNLOCKS
+      #ifdef HX_PS3
+      (beat_num 0 kUnlockArena World1) 
+      (beat_num 0 kUnlockArena World2) 
+      (beat_num 0 kUnlockArena World3) 
+      (beat_num 0 kUnlockArena PERFECTBRAIN) 
+      (beat_num 0 kUnlockArena WETWARE) 
+      (play_num_qp 1 kUnlockPowerup autocatcher) 
+      (play_num 2 kUnlockExtraSong PHANTOMS) 
+      (beat_num 0 kUnlockArena DREAMER) 
+      (beat_num 0 kUnlockArena RECESSION) 
+      (beat_num 0 kUnlockArena DONOTRETREAT) 
+      (beat_num 14 kUnlockFreQMode freq_mode) 
+      (beat_campaign 
+         (3 15 1) kUnlockSuperSkill skill_nightmare) 
+      (beat_num 1 kUnlockPowerup autocatcher) 
+      (beat_num 4 kUnlockPowerup slowdown) 
+      (region_scored 1 kUnlockNormalSong BREAKFORME) 
+      (beat_num 4 kUnlockNormalSong DECODE_ME) 
+      (beat_num 4 kUnlockNormalSong ISEEYOU) 
+      (beat_num 6 kUnlockPowerup freestyle) 
+      (beat_num 4 kUnlockNormalSong HUMANLOVE) 
+      (beat_num 8 kUnlockNormalSong ASTROSIGHT) 
+      (beat_num 9 kUnlockPowerup crippler) 
+      (region_scored 2 kUnlockNormalSong MAGPIE) 
+      (beat_num 9 kUnlockNormalSong SUPRASPATIAL) 
+      (beat_num 9 kUnlockNormalSong DIGITALPARALYSIS) 
+      (beat_num 11 kUnlockPowerup multiplier) 
+      (beat_num 9 kUnlockNormalSong ENERGIZE) 
+      (beat_num 13 kUnlockNormalSong DALATECHT) 
+      (beat_num 14 kUnlockPowerup bumper) 
+      (region_scored 3 kUnlockNormalSong WAYFARER) 
+      (play_num 4 kUnlockExtraSong CONCEPT) 
+      (play_num_qp 5 kUnlockNormalSong DECODE_ME) 
+      (play_num_qp 6 kUnlockPowerup freestyle) 
+      (play_num 7 kUnlockExtraSong NECRODANCER) 
+      (play_num_qp 8 kUnlockNormalSong ISEEYOU) 
+      (play_num_qp 10 kUnlockPowerup crippler) 
+      (play_num 10 kUnlockExtraSong REDGIANT) 
+      (play_num_qp 11 kUnlockNormalSong HUMANLOVE) 
+      (play_num_qp 15 kUnlockPowerup bumper) 
+      (play_num 13 kUnlockExtraSong CRYSTAL) 
+      (play_num_qp 14 kUnlockNormalSong SUPRASPATIAL) 
+      (play_num_qp 19 kUnlockPowerup multiplier) 
+      (play_num 16 kUnlockExtraSong SYNTHESIZED2014) 
+      (play_num_qp 17 kUnlockNormalSong DIGITALPARALYSIS) 
+      (play_num_qp 23 kUnlockPowerup slowdown) 
+      (play_num 19 kUnlockExtraSong ALLTHETIME) 
+      (play_num_qp 20 kUnlockNormalSong ENERGIZE) 
+      (play_num 22 kUnlockExtraSong IMPOSSIBLE) 
+      (play_num 25 kUnlockExtraSong UNFINISHEDBUSINESS) 
+      (play_num 28 kUnlockExtraSong LIGHTS) 
+      (play_num 31 kUnlockExtraSong MUZE) 
+      (play_num 34 kUnlockExtraSong FORCEQUIT) 
+      (play_num 37 kUnlockExtraSong ASSAULT_ON) 
+      (play_num 41 kUnlockExtraSong CRAZY_RIDE) 
+      (play_num 45 kUnlockExtraSong ENTOMOPHOBIA) 
+      (play_num 80 kUnlockFreQMode freq_mode)
+      #else
       (beat_num 0 kUnlockArena World1) 
       (beat_num 0 kUnlockArena World2) 
       (beat_num 0 kUnlockArena World3) 
@@ -399,6 +471,7 @@
       (play_num 56 kUnlockExtraSong CRAZY_RIDE) 
       (play_num 60 kUnlockExtraSong ENTOMOPHOBIA) 
       (play_num 80 kUnlockFreQMode freq_mode)
+      #endif
       #else
       (beat_num 0 kUnlockArena World1) 
       (beat_num 0 kUnlockArena World2) 
@@ -507,8 +580,15 @@
    (german_fx_midi_file "SoundFX/german/FX.mid") 
    (italian_fx_midi_file "SoundFX/italian/FX.mid"))
 (gfx 
-   (difficulty_scale_tweaks 1.0 1.0 0.93 0.8 0.8))
-(init)
+   (difficulty_scale_tweaks 1.0 1.0 0.93 0.8 0.8)
+   #ifdef HX_PS3
+   (allow_tessellation FALSE) 
+   (allow_skinning TRUE)
+   #endif
+)
+(init
+   #include ../dx/ui/dx_init.dta 
+)
 (game 
    (zero_rand_seed FALSE) 
    (stats) 
@@ -576,7 +656,7 @@
    (initial_juice 8.0 8.0 8.0 8.0 8.0) 
    (checkpoint_juice 8.0 2.0 2.0 2.0 2.0) 
    (capture_juice 1.0 1.0 1.0 1.0 0.0) 
-   (damage_juice -1.0 -1.0 -1.0 -1.0 -1.0) 
+   (damage_juice 0.0 0.0 0.0 0.0 0.0) 
    (checkpoint_fail_juice -4.0 -4.0 -4.0 -4.0 -4.0) 
    (juice_meter_max 8.0 8.0 8.0 8.0 8.0) 
    (damage_invuln_time_ms 750) 

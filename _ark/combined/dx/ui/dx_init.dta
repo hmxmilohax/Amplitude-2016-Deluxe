@@ -1,0 +1,13 @@
+;{file_mkdir {sprint AMP16DX_PATH "settings"}}
+
+{set $nofail FALSE}
+
+; {foreach $entry {read_file {sprint AMP16DX_PATH "dx.dta"}}
+; 	{if {== {elem $entry 0} {basename vsync}
+; 		{set $setting1
+; 			{elem {find $entry vsync} 1}
+; 		}
+; 	}
+; }
+
+;{set $setting1 TRUE}

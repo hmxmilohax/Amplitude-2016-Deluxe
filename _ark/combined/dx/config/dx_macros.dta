@@ -1,0 +1,11 @@
+#define AMP16DX_PATH
+(
+   #ifdef HX_PS3 
+      {if_else {== {$platform_mgr get_region} 1} ; for some reason, files can't be read on ps3, so this does nothing rn
+         "GD:/dev_hdd0/game/NPUB31810/USRDIR/"
+         "GD:/dev_hdd0/game/NPEB02398/USRDIR/"
+      }
+   #else
+   "data:/GoldHEN/AMP16DX/"
+   #endif
+)
